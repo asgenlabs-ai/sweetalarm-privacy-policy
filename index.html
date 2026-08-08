@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
 
   <title>Privacy Policy | Sweet Alarm</title>
 
   <meta
     name="description"
-    content="Privacy Policy for Sweet Alarm by ASGENLABS. Learn how Sweet Alarm uses Android permissions, Google AdMob, device capabilities and data."
-  />
+    content="Official Privacy Policy for Sweet Alarm by ASGENLABS, covering Android permissions, Google AdMob, advertising, device capabilities, data processing and user privacy."
+  >
 
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+
+  <!--
+    Security hardening for this static GitHub Pages privacy-policy page.
+    No JavaScript, forms, frames, trackers, analytics or third-party assets
+    are required by this page.
+  -->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'none';
+      img-src 'self' data:;
+      style-src 'unsafe-inline';
+      font-src 'none';
+      script-src 'none';
+      connect-src 'none';
+      media-src 'none';
+      object-src 'none';
+      frame-src 'none';
+      child-src 'none';
+      worker-src 'none';
+      manifest-src 'none';
+      form-action 'none';
+      base-uri 'none';
+      upgrade-insecure-requests;
+    "
+  >
+
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
 
   <style>
+    :root {
+      --background: #ffffff;
+      --surface: #f8fafc;
+      --surface-strong: #f1f5f9;
+      --border: #e5e7eb;
+      --text: #172033;
+      --text-soft: #5f6b7d;
+      --heading: #0f172a;
+      --primary: #4f46e5;
+      --primary-soft: #eef2ff;
+      --purple: #7c3aed;
+      --shadow: 0 14px 45px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+      --content: 1040px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -22,110 +73,200 @@
 
     html {
       scroll-behavior: smooth;
+      background: var(--background);
     }
 
     body {
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
-      background: #ffffff;
-      color: #1f2937;
+      min-height: 100vh;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      background: var(--background);
+      color: var(--text);
       line-height: 1.75;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: anywhere;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      text-underline-offset: 3px;
+    }
+
+    a:hover,
+    a:focus-visible {
+      text-decoration: underline;
+    }
+
+    a:focus-visible {
+      outline: 3px solid rgba(79, 70, 229, 0.28);
+      outline-offset: 4px;
+      border-radius: 6px;
     }
 
     .container {
-      width: min(100% - 40px, 1040px);
+      width: min(calc(100% - 40px), var(--content));
       margin: 0 auto;
     }
 
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 24px 0;
       position: sticky;
       top: 0;
       z-index: 20;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-weight: 750;
+      gap: 13px;
+      color: var(--heading);
       font-size: 20px;
-      color: #111827;
+      font-weight: 750;
+      letter-spacing: -0.02em;
     }
 
-    .brand-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 13px;
+      object-fit: cover;
+      box-shadow: 0 5px 18px rgba(15, 23, 42, 0.12);
+    }
+
+    .company {
+      color: var(--text-soft);
+      font-size: 14px;
+      font-weight: 600;
     }
 
     .hero {
-      padding: 72px 0 58px;
+      padding: 82px 0 64px;
       border-bottom: 1px solid #f1f5f9;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(124, 58, 237, 0.06),
+          transparent 31%
+        ),
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(59, 130, 246, 0.06),
+          transparent 30%
+        ),
+        #ffffff;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 48px;
     }
 
     .eyebrow {
-      color: #4f46e5;
+      margin-bottom: 14px;
+      color: var(--primary);
       font-size: 13px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 14px;
+      letter-spacing: 0.11em;
     }
 
     h1 {
-      color: #111827;
-      font-size: clamp(40px, 6vw, 64px);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-      margin-bottom: 18px;
+      max-width: 760px;
+      margin-bottom: 19px;
+      color: var(--heading);
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
     }
 
-    .hero p {
+    .hero-copy {
       max-width: 760px;
+      color: var(--text-soft);
       font-size: 18px;
-      color: #64748b;
     }
 
     .updated {
       display: inline-block;
-      margin-top: 22px;
-      background: #f1f5f9;
-      color: #475569;
+      margin-top: 24px;
       padding: 8px 14px;
+      border: 1px solid #e2e8f0;
       border-radius: 999px;
+      background: #ffffff;
+      color: #475569;
       font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero-logo-wrap {
+      width: 190px;
+      height: 190px;
+      padding: 12px;
+      border: 1px solid rgba(226, 232, 240, 0.85);
+      border-radius: 42px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-logo {
+      width: 100%;
+      height: 100%;
+      border-radius: 34px;
+      object-fit: cover;
     }
 
     main {
-      padding: 58px 0 90px;
+      padding: 62px 0 94px;
     }
 
     section {
-      margin-bottom: 58px;
-      scroll-margin-top: 110px;
+      margin-bottom: 62px;
+      scroll-margin-top: 105px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
     }
 
     h2 {
-      color: #111827;
-      font-size: 29px;
-      line-height: 1.25;
-      letter-spacing: -0.02em;
       margin-bottom: 18px;
+      color: var(--heading);
+      font-size: 30px;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
     }
 
     h3 {
-      color: #111827;
-      font-size: 19px;
       margin: 18px 0 8px;
+      color: var(--heading);
+      font-size: 20px;
+      line-height: 1.35;
     }
 
     p {
@@ -133,121 +274,199 @@
     }
 
     ul {
-      margin: 12px 0 20px 23px;
+      margin: 12px 0 20px 24px;
     }
 
     li {
+      padding-left: 2px;
       margin-bottom: 9px;
     }
 
-    a {
-      color: #4f46e5;
-      text-decoration: none;
+    .summary {
+      margin-bottom: 54px;
+      padding: 27px;
+      border: 1px solid #dfe5ee;
+      border-radius: var(--radius);
+      background: var(--surface);
     }
 
-    a:hover {
-      text-decoration: underline;
+    .summary-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+      color: var(--heading);
+      font-size: 19px;
+      font-weight: 750;
     }
 
-    .summary-box,
-    .note-box {
-      border: 1px solid #e2e8f0;
-      background: #f8fafc;
-      border-radius: 18px;
-      padding: 24px;
-      margin-bottom: 40px;
+    .summary-mini-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
-    .note-box {
-      border-left: 4px solid #6366f1;
-      border-radius: 0 14px 14px 0;
+    .summary p:last-child {
+      margin-bottom: 0;
     }
 
     .permission {
-      border-top: 1px solid #e5e7eb;
-      padding: 27px 0;
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
     }
 
     .permission:first-of-type {
-      border-top: none;
+      border-top: 0;
     }
 
     .permission-code {
       display: inline-block;
+      max-width: 100%;
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: var(--primary-soft);
+      color: #4338ca;
       font-family: Consolas, "SFMono-Regular", monospace;
       font-size: 13px;
-      color: #4338ca;
-      background: #eef2ff;
-      padding: 6px 10px;
-      border-radius: 7px;
-      margin-bottom: 8px;
-      overflow-wrap: anywhere;
+      line-height: 1.5;
+    }
+
+    .note {
+      margin: 24px 0;
+      padding: 20px 22px;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 14px 14px 0;
+      background: var(--surface);
+    }
+
+    .note p:last-child {
+      margin-bottom: 0;
     }
 
     .table-wrap {
+      margin: 22px 0;
       overflow-x: auto;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--border);
       border-radius: 16px;
-      margin: 20px 0;
     }
 
     table {
       width: 100%;
+      min-width: 720px;
       border-collapse: collapse;
-      min-width: 700px;
     }
 
     th,
     td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
       text-align: left;
-      padding: 15px 16px;
-      border-bottom: 1px solid #e5e7eb;
       vertical-align: top;
     }
 
     th {
-      background: #f8fafc;
-      color: #111827;
+      background: var(--surface);
+      color: var(--heading);
+      font-weight: 700;
     }
 
     tr:last-child td {
-      border-bottom: none;
+      border-bottom: 0;
+    }
+
+    .contact {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
     }
 
     footer {
-      border-top: 1px solid #e5e7eb;
-      padding: 38px 0;
-      color: #64748b;
+      padding: 42px 0;
+      border-top: 1px solid var(--border);
+      color: var(--text-soft);
       font-size: 14px;
     }
 
-    footer strong {
-      color: #111827;
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 12px;
+      color: var(--heading);
+      font-weight: 750;
+      font-size: 16px;
     }
 
-    @media (max-width: 640px) {
+    .footer-logo {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 760px) {
       .container {
-        width: min(100% - 28px, 1040px);
+        width: min(calc(100% - 28px), var(--content));
       }
 
-      header {
-        padding: 18px 0;
+      .header-inner {
+        min-height: 70px;
+      }
+
+      .company {
+        display: none;
       }
 
       .hero {
-        padding: 48px 0 40px;
+        padding: 48px 0 44px;
+      }
+
+      .hero-grid {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 28px;
+      }
+
+      .hero-logo-wrap {
+        width: 108px;
+        height: 108px;
+        padding: 7px;
+        border-radius: 26px;
+      }
+
+      .hero-logo {
+        border-radius: 21px;
+      }
+
+      .hero-copy {
+        font-size: 17px;
       }
 
       main {
-        padding-top: 42px;
+        padding: 44px 0 72px;
       }
 
       section {
-        margin-bottom: 46px;
+        margin-bottom: 48px;
       }
 
       h2 {
         font-size: 25px;
+      }
+
+      .summary,
+      .contact {
+        padding: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
       }
     }
   </style>
@@ -256,44 +475,82 @@
 <body>
 
 <header>
-  <div class="container">
+  <div class="container header-inner">
+
     <div class="brand">
-      <div class="brand-icon">S</div>
-      Sweet Alarm
+      <img
+        src="assets/logo.png"
+        class="brand-logo"
+        alt="Sweet Alarm logo"
+        width="46"
+        height="46"
+      >
+      <span>Sweet Alarm</span>
     </div>
+
+    <div class="company">ASGENLABS</div>
+
   </div>
 </header>
 
+
 <div class="hero">
-  <div class="container">
-    <div class="eyebrow">ASGENLABS</div>
+  <div class="container hero-grid">
 
-    <h1>Privacy Policy</h1>
+    <div>
+      <div class="eyebrow">ASGENLABS · Official Privacy Policy</div>
 
-    <p>
-      This Privacy Policy explains how Sweet Alarm uses Android permissions,
-      device capabilities, locally stored alarm information, advertising
-      services and third-party technologies when you use the application.
-    </p>
+      <h1>Privacy Policy</h1>
 
-    <span class="updated">Last updated: August 8, 2026</span>
+      <p class="hero-copy">
+        This Privacy Policy explains how Sweet Alarm uses Android permissions,
+        device capabilities, locally stored alarm information, advertising
+        services and third-party technologies when you use the application.
+      </p>
+
+      <span class="updated">Last updated: August 8, 2026</span>
+    </div>
+
+    <div class="hero-logo-wrap">
+      <img
+        src="assets/logo.png"
+        class="hero-logo"
+        alt="Sweet Alarm application logo"
+        width="190"
+        height="190"
+      >
+    </div>
+
   </div>
 </div>
+
 
 <main>
 <div class="container">
 
-  <div class="summary-box">
-    <strong>Privacy Summary</strong>
+  <div class="summary">
 
-    <p style="margin-top:10px;margin-bottom:0;">
-      Sweet Alarm is an Android alarm-clock application developed by ASGENLABS.
-      Core alarm information is primarily handled on the device. Sweet Alarm
-      also uses third-party services such as Google AdMob / Google Mobile Ads
-      to display advertisements. Those third-party services may automatically
-      process certain information as described below.
+    <div class="summary-title">
+      <img
+        src="assets/logo.png"
+        class="summary-mini-logo"
+        alt=""
+        width="38"
+        height="38"
+      >
+      Privacy Summary
+    </div>
+
+    <p>
+      Sweet Alarm is an Android alarm-clock application developed by
+      ASGENLABS. Core alarm information is primarily handled locally on the
+      user's device. Sweet Alarm also uses third-party services such as Google
+      AdMob / Google Mobile Ads to display advertisements. Those services may
+      automatically process certain information as described in this policy.
     </p>
+
   </div>
+
 
   <section>
     <h2>1. About This Privacy Policy</h2>
@@ -305,31 +562,33 @@
     </p>
 
     <p>
-      The purpose of this policy is to clearly explain what device permissions
-      Sweet Alarm uses, why those permissions are necessary, how information
-      may be processed, and what choices are available to users.
+      This policy explains the Android permissions and device capabilities
+      used by Sweet Alarm, how alarm-related information is handled, how
+      advertising services may process information, and what privacy controls
+      may be available to users.
     </p>
   </section>
+
 
   <section>
     <h2>2. Core Alarm Information</h2>
 
     <p>
-      Sweet Alarm may store information required to provide its alarm and
-      time-management functionality on your device.
+      Sweet Alarm may store information required to provide alarm and
+      time-management functionality locally on your device.
     </p>
 
-    <p>This may include information such as:</p>
+    <p>This information may include:</p>
 
     <ul>
-      <li>Alarm time</li>
-      <li>Repeat schedule</li>
-      <li>Alarm label</li>
-      <li>Alarm sound preferences</li>
+      <li>Alarm time and schedule</li>
+      <li>Repeat preferences</li>
+      <li>Alarm labels</li>
+      <li>Alarm sounds and volume-related preferences</li>
       <li>Vibration preferences</li>
       <li>Alarm stop-method settings</li>
-      <li>Theme or interface preferences</li>
-      <li>Timer, stopwatch or other app preferences</li>
+      <li>Theme and interface preferences</li>
+      <li>Timer, stopwatch and other application preferences</li>
     </ul>
 
     <p>
@@ -338,15 +597,18 @@
     </p>
   </section>
 
+
   <section>
-    <h2>3. Android Permissions Used by Sweet Alarm</h2>
+    <h2>3. Android Permissions and Capabilities</h2>
 
     <p>
-      Sweet Alarm uses Android system permissions and capabilities necessary
-      to provide reliable alarm behavior.
+      Sweet Alarm requests Android permissions and system capabilities that
+      support reliable alarm delivery and presentation.
     </p>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.POST_NOTIFICATIONS
       </span>
@@ -354,18 +616,21 @@
       <h3>Notifications</h3>
 
       <p>
-        Sweet Alarm uses notification permission on supported Android
-        versions to show alarm-related notifications and foreground-service
+        Sweet Alarm uses notification permission on supported Android versions
+        to display alarm-related notifications and foreground-service
         notifications.
       </p>
 
       <p>
-        Users can control notification permission through Android system
-        settings.
+        Android may ask you to grant notification permission. You can manage
+        this permission through your device settings.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.VIBRATE
       </span>
@@ -373,17 +638,20 @@
       <h3>Vibration</h3>
 
       <p>
-        Sweet Alarm uses vibration to provide physical alert feedback when an
-        alarm is active and vibration is enabled.
+        Sweet Alarm uses device vibration to provide physical alert feedback
+        when an alarm is active and vibration is enabled.
       </p>
 
       <p>
-        This permission does not provide access to personal files, contacts,
-        photos, camera, microphone or messages.
+        This permission does not provide access to your contacts, messages,
+        camera, microphone, photographs or files.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.SCHEDULE_EXACT_ALARM
       </span>
@@ -391,18 +659,21 @@
       <h3>Schedule Exact Alarms</h3>
 
       <p>
-        Sweet Alarm uses Android's exact-alarm capability to schedule eligible
-        alarms for the precise time selected by the user.
+        Sweet Alarm uses Android's exact-alarm capability so eligible alarms
+        can trigger at the specific time selected by the user.
       </p>
 
       <p>
-        Exact timing is important for alarm-clock functionality because normal
-        background scheduling can otherwise be delayed by Android power and
-        background-management systems.
+        Exact scheduling is important for an alarm-clock application because
+        ordinary background scheduling may otherwise be delayed by Android
+        power-management behavior.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.USE_EXACT_ALARM
       </span>
@@ -411,25 +682,31 @@
 
       <p>
         Sweet Alarm declares this capability because accurately timed alarms
-        are a core purpose of the application.
+        are a core function of the application.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.RECEIVE_BOOT_COMPLETED
       </span>
 
-      <h3>Restore Alarms After Restart</h3>
+      <h3>Restore Alarms After Device Restart</h3>
 
       <p>
-        Sweet Alarm can receive supported Android boot-completed events so
-        alarms can be restored or rescheduled after a device restart where
-        necessary.
+        Sweet Alarm may receive supported Android boot-completed events so
+        scheduled alarms can be restored or rescheduled when necessary after
+        the device restarts.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.WAKE_LOCK
       </span>
@@ -438,16 +715,19 @@
 
       <p>
         Sweet Alarm may temporarily keep the device processor active while an
-        alarm is being triggered or handled.
+        alarm is being delivered or handled.
       </p>
 
       <p>
-        This helps prevent Android power-management behavior from interrupting
-        a time-sensitive alarm operation.
+        This helps reduce the chance that Android power-management behavior
+        interrupts a time-sensitive alarm operation.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.FOREGROUND_SERVICE
       </span>
@@ -456,34 +736,41 @@
 
       <p>
         Sweet Alarm may run an Android foreground service while an alarm is
-        actively ringing or being processed.
+        actively operating.
       </p>
 
       <p>
-        This helps maintain alarm sound, vibration and other active alarm
-        functionality while the app's main screen is not in the foreground.
+        This supports user-visible alarm functionality such as sound,
+        vibration and active alarm processing even when the application's
+        normal interface is not in the foreground.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
       </span>
 
-      <h3>Media Playback Foreground Service</h3>
+      <h3>Foreground Media Playback</h3>
 
       <p>
-        Sweet Alarm uses this Android capability to support alarm audio
-        playback through a foreground service.
+        Sweet Alarm uses the media-playback foreground-service capability to
+        support alarm audio playback while an alarm is active.
       </p>
 
       <p>
-        This capability relates to audio playback and does not itself provide
-        microphone-recording access.
+        This capability relates to playing alarm audio. It does not itself
+        provide Sweet Alarm with microphone-recording permission.
       </p>
+
     </div>
 
+
     <div class="permission">
+
       <span class="permission-code">
         android.permission.USE_FULL_SCREEN_INTENT
       </span>
@@ -491,42 +778,44 @@
       <h3>Full-Screen Alarm Presentation</h3>
 
       <p>
-        Sweet Alarm may use Android's full-screen intent functionality so an
-        active alarm can be presented prominently when appropriate, including
-        while the device is locked or another application is displayed,
-        subject to Android system rules and user settings.
+        Sweet Alarm may use Android's full-screen intent functionality to
+        present an active alarm prominently when appropriate, including while
+        the device is locked or another application is visible, subject to
+        Android platform rules and device settings.
       </p>
 
       <p>
-        This capability is used for time-sensitive alarm functionality and not
-        for unrelated promotional full-screen content.
+        Sweet Alarm uses this capability for time-sensitive alarm experiences,
+        not for unrelated promotional full-screen content.
       </p>
+
     </div>
+
   </section>
 
+
   <section>
-    <h2>4. Internet and Network Access</h2>
+    <h2>4. Internet and Network Connectivity</h2>
 
     <p>
-      Sweet Alarm may use Internet and network-state capabilities when
-      network-dependent functionality or integrated third-party services
-      require them.
+      Sweet Alarm may use Internet connectivity when a feature or integrated
+      third-party service requires network communication.
     </p>
 
     <p>
-      This includes services such as Google AdMob / Google Mobile Ads when
-      advertisements are enabled.
+      This includes Google AdMob / Google Mobile Ads when advertisements are
+      requested or displayed.
     </p>
 
     <p>
-      Android's <strong>INTERNET</strong> and
-      <strong>ACCESS_NETWORK_STATE</strong> permissions are normal system
-      permissions and do not require a runtime permission dialog.
+      Internet connectivity itself does not provide Sweet Alarm with access to
+      your camera, microphone, contacts or personal files.
     </p>
   </section>
 
+
   <section>
-    <h2>5. Advertising and Google AdMob</h2>
+    <h2>5. Google AdMob and Google Mobile Ads</h2>
 
     <p>
       Sweet Alarm uses Google AdMob / Google Mobile Ads SDK to display
@@ -534,171 +823,186 @@
     </p>
 
     <p>
-      Google Mobile Ads is a third-party service provided by Google. When ads
-      are requested, loaded, displayed or interacted with, the Google Mobile
-      Ads SDK may automatically collect, process and share certain information
-      with Google.
+      Google Mobile Ads is a third-party advertising service provided by
+      Google. According to Google's published Mobile Ads data-disclosure
+      information, the SDK may automatically collect and share certain data
+      for advertising, analytics and fraud-prevention purposes.
     </p>
 
     <p>This may include:</p>
 
     <ul>
-      <li>IP address</li>
-      <li>Device or account identifiers</li>
-      <li>Advertising identifiers where available and permitted</li>
-      <li>App interactions</li>
-      <li>Advertisement views and interactions</li>
-      <li>Diagnostic information</li>
-      <li>SDK and application performance information</li>
-      <li>Information used for fraud prevention and security</li>
+      <li>
+        <strong>IP address</strong>, which may be used to estimate the general
+        location of a device.
+      </li>
+
+      <li>
+        <strong>User-product interactions</strong>, such as app launches,
+        taps and video views.
+      </li>
+
+      <li>
+        <strong>Diagnostic information</strong>, including information related
+        to application or SDK performance.
+      </li>
+
+      <li>
+        <strong>Device and account identifiers</strong>, which may include
+        Android advertising ID, app-set ID or other applicable identifiers.
+      </li>
     </ul>
 
     <p>
-      Google may use information processed through the Google Mobile Ads SDK
-      for purposes including advertising, analytics, measurement, security and
-      fraud prevention, according to Google's applicable policies and product
-      configuration.
-    </p>
-
-    <div class="note-box">
-      The data processed by Google Mobile Ads may vary depending on app
-      configuration, device settings, user consent, region, applicable law and
-      the advertising mode being used.
-    </div>
-  </section>
-
-  <section>
-    <h2>6. Personalized and Non-Personalized Advertising</h2>
-
-    <p>
-      Advertising behavior may vary depending on the user's region, privacy
-      choices, device configuration and applicable consent requirements.
+      The precise data processed may depend on the Google Mobile Ads SDK
+      version, application configuration, advertising settings, user privacy
+      choices, region and applicable law.
     </p>
 
     <p>
-      Google advertising technology may support different ad-serving modes,
-      including personalized ads, non-personalized ads, limited ads and other
-      privacy-preserving or technical ad-delivery modes.
-    </p>
-
-    <p>
-      Where required, consent or privacy choices should be handled through the
-      applicable Google privacy and consent mechanisms integrated into the
-      application.
+      ASGENLABS does not independently sell personal information collected
+      through Sweet Alarm.
     </p>
   </section>
 
+
   <section>
-    <h2>7. Google User Messaging Platform and Consent</h2>
+    <h2>6. Advertising Purposes</h2>
 
     <p>
+      Information processed through Google Mobile Ads may be used by Google
+      for purposes such as:
+    </p>
+
+    <ul>
+      <li>Displaying advertisements</li>
+      <li>Advertising measurement</li>
+      <li>Analytics</li>
+      <li>Application and advertising performance</li>
+      <li>Security</li>
+      <li>Fraud and abuse prevention</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h2>7. Personalized, Non-Personalized and Limited Advertising</h2>
+
+    <p>
+      The advertising mode used by Google may vary based on region, applicable
+      privacy requirements, user consent, application configuration and user
+      device settings.
+    </p>
+
+    <p>
+      Depending on these factors, Google may provide personalized,
+      non-personalized, limited or other supported forms of advertising.
+    </p>
+  </section>
+
+
+  <section>
+    <h2>8. Privacy Consent and Google UMP</h2>
+
+    <p>
+      Where applicable and where implemented in the distributed application,
       Sweet Alarm may use Google's User Messaging Platform (UMP) or other
-      Google-supported consent technology to manage privacy choices in regions
-      where consent or privacy disclosures are required.
+      Google-supported privacy tools to provide required consent notices and
+      privacy choices.
     </p>
 
     <p>
-      Available privacy choices may differ depending on location, applicable
-      privacy laws and Google advertising configuration.
+      Available options can vary by user region, applicable law, Google
+      advertising configuration and app version.
     </p>
   </section>
 
-  <section>
-    <h2>8. Third-Party Data Processing</h2>
-
-    <p>
-      Third-party SDKs integrated into Sweet Alarm may process data
-      independently according to their own privacy policies and terms.
-    </p>
-
-    <p>
-      ASGENLABS does not control every aspect of data processing performed by
-      third-party service providers.
-    </p>
-
-    <p>
-      Users are encouraged to review the privacy information provided by
-      Google and any other third-party service provider used by the app.
-    </p>
-  </section>
 
   <section>
     <h2>9. Data Collection and Sharing Summary</h2>
 
     <p>
       Sweet Alarm's core alarm functionality primarily handles alarm-related
-      information locally on the device.
+      preferences locally on the user's device.
     </p>
 
     <p>
-      However, third-party services integrated into Sweet Alarm, including
-      Google AdMob / Google Mobile Ads, may transmit information off the device
-      and process that information as described in this Privacy Policy.
+      Third-party SDKs integrated into the application, including Google
+      Mobile Ads, may transmit certain information from the device as
+      described above.
     </p>
 
     <div class="table-wrap">
+
       <table>
+
         <thead>
           <tr>
-            <th>Information / Capability</th>
-            <th>Primary Purpose</th>
-            <th>Possible Processing</th>
+            <th>Information or Capability</th>
+            <th>Purpose</th>
+            <th>Typical Handling</th>
           </tr>
         </thead>
 
         <tbody>
+
           <tr>
-            <td>Alarm settings</td>
-            <td>Alarm functionality</td>
-            <td>Primarily stored locally</td>
+            <td>Alarm preferences</td>
+            <td>Core alarm functionality</td>
+            <td>Primarily handled locally</td>
           </tr>
 
           <tr>
-            <td>Notification access</td>
+            <td>Notification capability</td>
             <td>Alarm notifications</td>
             <td>Android system functionality</td>
           </tr>
 
           <tr>
-            <td>Exact alarm access</td>
-            <td>Trigger alarms on time</td>
+            <td>Exact alarms</td>
+            <td>Trigger alarms at scheduled times</td>
             <td>Android system functionality</td>
           </tr>
 
           <tr>
-            <td>Device/IP information</td>
-            <td>Advertising and security</td>
-            <td>May be processed by Google AdMob</td>
+            <td>IP address</td>
+            <td>Ads, analytics and fraud prevention</td>
+            <td>May be processed by Google Mobile Ads</td>
           </tr>
 
           <tr>
-            <td>Ad interactions</td>
-            <td>Advertising and measurement</td>
-            <td>May be processed by Google AdMob</td>
+            <td>User-product interactions</td>
+            <td>Ads and analytics</td>
+            <td>May be processed by Google Mobile Ads</td>
           </tr>
 
           <tr>
             <td>Diagnostics</td>
-            <td>Performance and fraud prevention</td>
-            <td>May be processed by Google AdMob</td>
+            <td>Performance and reliability</td>
+            <td>May be processed by Google Mobile Ads</td>
           </tr>
 
           <tr>
             <td>Device/account identifiers</td>
             <td>Advertising, analytics and security</td>
-            <td>May be processed by Google AdMob</td>
+            <td>May be processed by Google Mobile Ads</td>
           </tr>
+
         </tbody>
+
       </table>
+
     </div>
+
   </section>
+
 
   <section>
     <h2>10. Permissions Sweet Alarm Does Not Declare</h2>
 
     <p>
-      Based on the Android permission configuration provided for the current
-      version, Sweet Alarm does not declare permissions for:
+      Based on the Android permission configuration currently provided for
+      Sweet Alarm, the application does not declare permissions for:
     </p>
 
     <ul>
@@ -713,34 +1017,33 @@
     </ul>
 
     <p>
-      If future versions introduce features requiring additional permissions,
-      this Privacy Policy may be updated.
+      This section may be updated if future Sweet Alarm versions introduce
+      functionality that requires additional permissions.
     </p>
   </section>
+
 
   <section>
-    <h2>11. Lock Screen and Screen Wake Behavior</h2>
+    <h2>11. Lock-Screen and Screen-Wake Behavior</h2>
 
     <p>
-      Sweet Alarm is configured to support alarm presentation while the device
-      is locked and may turn on the screen when an alarm requires user
-      attention, subject to Android behavior and user settings.
+      Sweet Alarm's alarm experience is designed to support presentation while
+      the device is locked and may turn on the display when an alarm requires
+      attention, subject to Android operating-system rules and user settings.
     </p>
   </section>
+
 
   <section>
     <h2>12. Device Restart and Direct Boot</h2>
 
     <p>
-      Sweet Alarm includes Android components configured to operate in
-      supported direct-boot scenarios.
-    </p>
-
-    <p>
-      This is intended to help restore or maintain alarm scheduling after
-      device restarts where supported.
+      Certain Sweet Alarm components support Android direct-boot scenarios.
+      This is intended to help preserve or restore alarm functionality around
+      supported device-restart situations.
     </p>
   </section>
+
 
   <section>
     <h2>13. Android Backup and Restore</h2>
@@ -750,188 +1053,215 @@
     </p>
 
     <p>
-      Where enabled and supported, eligible application data may be backed up
-      or restored through Android or the user's configured backup provider in
-      accordance with the application's backup rules, Android settings and the
-      applicable platform provider's policies.
-    </p>
-
-    <p>
-      Backup behavior may vary depending on Android version, device
-      manufacturer, user configuration and backup provider.
+      Where backup is enabled and supported, eligible application data may be
+      backed up or restored by Android or the user's configured backup provider
+      according to application backup rules, device settings and the
+      applicable provider's policies.
     </p>
   </section>
+
 
   <section>
     <h2>14. Data Retention</h2>
 
     <p>
-      Alarm preferences and other locally stored application settings may
-      remain on the device while Sweet Alarm is installed.
+      Alarm-related preferences and other locally stored settings may remain on
+      the device while Sweet Alarm is installed.
     </p>
 
     <p>
-      They may be removed when users delete applicable information, clear app
-      data or uninstall Sweet Alarm, subject to Android backup and restore
-      behavior.
+      Local data may be removed when applicable information is deleted, app
+      data is cleared or Sweet Alarm is uninstalled, subject to Android backup
+      and restore behavior.
     </p>
 
     <p>
-      Data processed by third-party services may be retained according to
-      those providers' own policies.
-    </p>
-  </section>
-
-  <section>
-    <h2>15. Sale of Personal Information</h2>
-
-    <p>
-      ASGENLABS does not independently sell personal information collected
-      through Sweet Alarm.
-    </p>
-
-    <p>
-      Third-party advertising services may process information for advertising
-      and related purposes as described above and according to their applicable
-      privacy policies.
+      Information processed by third-party providers may be retained according
+      to those providers' respective policies.
     </p>
   </section>
 
+
   <section>
-    <h2>16. Security</h2>
+    <h2>15. Data Security</h2>
 
     <p>
-      ASGENLABS takes reasonable measures appropriate to the nature of Sweet
-      Alarm to help protect application functionality and information handled
-      by the app.
+      Sweet Alarm is designed to minimize unnecessary web-facing functionality
+      in its core alarm experience and uses Android platform capabilities for
+      core alarm operations.
     </p>
 
     <p>
-      However, no software, device, communication method or storage system can
-      be guaranteed to be completely secure.
+      ASGENLABS takes reasonable technical and organizational measures
+      appropriate to the application to help protect information handled by
+      Sweet Alarm.
+    </p>
+
+    <p>
+      No software, device, network or electronic storage system can be
+      guaranteed to be completely secure in every circumstance.
     </p>
   </section>
 
+
   <section>
-    <h2>17. Your Privacy Choices</h2>
+    <h2>16. Your Choices and Controls</h2>
 
     <p>
-      Depending on your Android version, location, device and applicable laws,
-      you may have controls relating to:
+      Depending on Android version, device, region and applicable
+      configuration, users may be able to manage:
     </p>
 
     <ul>
-      <li>Notifications</li>
-      <li>Exact alarm access</li>
-      <li>Full-screen alarm behavior</li>
-      <li>Advertising personalization</li>
-      <li>Advertising identifier settings</li>
-      <li>Consent and privacy choices</li>
-      <li>Battery/background behavior</li>
+      <li>Notification permission</li>
+      <li>Exact-alarm access</li>
+      <li>Full-screen alarm access where supported</li>
+      <li>Advertising ID settings</li>
+      <li>Advertising or privacy choices</li>
       <li>Application data</li>
+      <li>Battery and background behavior</li>
       <li>Android backup settings</li>
     </ul>
 
     <p>
-      Disabling permissions or system capabilities required for alarms may
-      affect Sweet Alarm's ability to operate reliably.
+      Disabling Android capabilities required by an alarm application may
+      affect Sweet Alarm's ability to deliver alarms reliably.
     </p>
   </section>
+
 
   <section>
-    <h2>18. Children's Privacy</h2>
+    <h2>17. Children's Privacy</h2>
 
     <p>
-      Sweet Alarm is a general-purpose utility application and is not designed
-      specifically to solicit personal information from children.
+      Sweet Alarm is a general-purpose alarm and utility application and is
+      not designed specifically to solicit personal information from children.
     </p>
 
     <p>
-      Where advertising or other third-party services are used, their
-      applicable age requirements, privacy policies and platform requirements
-      also apply.
+      Where third-party advertising or platform services are used, their
+      applicable age requirements, privacy policies and platform rules also
+      apply.
     </p>
   </section>
+
 
   <section>
-    <h2>19. Google Play Data Safety</h2>
+    <h2>18. Google Play Data Safety</h2>
 
     <p>
-      Sweet Alarm's Google Play Data Safety disclosure should be kept
-      consistent with the actual behavior of the application and all
-      third-party SDKs included in the distributed version.
+      Sweet Alarm's Google Play Data Safety disclosure is intended to reflect
+      the application's actual data practices, including relevant behavior of
+      third-party libraries and SDKs included in versions distributed through
+      Google Play.
     </p>
 
     <p>
-      This includes data that may be automatically collected, processed or
-      shared by advertising or analytics SDKs.
-    </p>
-
-    <p>
-      If Sweet Alarm's SDK configuration or data practices change, the Data
-      Safety disclosure and this Privacy Policy may also be updated.
+      If Sweet Alarm's permissions, SDK configuration, features or data
+      practices change, ASGENLABS may update both this Privacy Policy and
+      applicable Google Play disclosures.
     </p>
   </section>
+
+
+  <section>
+    <h2>19. Third-Party Services</h2>
+
+    <p>
+      Third-party services integrated into Sweet Alarm may process information
+      according to their respective privacy policies, terms and technical
+      configurations.
+    </p>
+
+    <p>
+      Users are encouraged to review applicable Google privacy information
+      relating to Google Mobile Ads and other Google services used by the app.
+    </p>
+  </section>
+
 
   <section>
     <h2>20. Changes to This Privacy Policy</h2>
 
     <p>
-      ASGENLABS may update this Privacy Policy when Sweet Alarm's functionality,
-      permissions, advertising configuration, third-party services, legal
-      obligations or privacy practices change.
+      ASGENLABS may update this Privacy Policy when Sweet Alarm's
+      functionality, Android permissions, advertising configuration,
+      third-party integrations, legal requirements or privacy practices
+      change.
     </p>
 
     <p>
-      Updated versions will be published on this page with an updated
-      effective date where appropriate.
+      Updates will be published on this page and the last-updated date may be
+      revised when appropriate.
     </p>
   </section>
+
 
   <section>
     <h2>21. Contact Us</h2>
 
-    <p>
-      For questions about Sweet Alarm, Android permissions, advertising or
-      this Privacy Policy, contact:
-    </p>
+    <div class="contact">
 
-    <p>
-      <strong>Developer:</strong> ASGENLABS<br />
-      <strong>Application:</strong> Sweet Alarm<br />
-      <strong>Package:</strong> com.asgenlabs.sweetalarm<br />
+      <p>
+        If you have questions about Sweet Alarm, Android permissions,
+        advertising, privacy or this Privacy Policy, contact:
+      </p>
 
-      <strong>Support Email:</strong>
-      <a href="mailto:support@asgenlabs.com">
-        support@asgenlabs.com
-      </a><br />
+      <p>
+        <strong>Developer:</strong> ASGENLABS<br>
 
-      <strong>Developer Email:</strong>
-      <a href="mailto:asgenlabs@gmail.com">
-        asgenlabs@gmail.com
-      </a><br />
+        <strong>Application:</strong> Sweet Alarm<br>
 
-      <strong>Phone:</strong>
-      <a href="tel:+918116936393">
-        +91 81169 36393
-      </a>
-    </p>
+        <strong>Android Package:</strong>
+        com.asgenlabs.sweetalarm<br>
+
+        <strong>Support Email:</strong>
+        <a href="mailto:support@asgenlabs.com">
+          support@asgenlabs.com
+        </a><br>
+
+        <strong>Developer Email:</strong>
+        <a href="mailto:asgenlabs@gmail.com">
+          asgenlabs@gmail.com
+        </a><br>
+
+        <strong>Phone:</strong>
+        <a href="tel:+918116936393">
+          +91 81169 36393
+        </a>
+      </p>
+
+    </div>
+
   </section>
 
 </div>
 </main>
 
+
 <footer>
   <div class="container">
-    <strong>Sweet Alarm</strong>
 
-    <p style="margin-top:6px;">
+    <div class="footer-brand">
+      <img
+        src="assets/logo.png"
+        class="footer-logo"
+        alt="Sweet Alarm logo"
+        width="38"
+        height="38"
+      >
+
+      <span>Sweet Alarm</span>
+    </div>
+
+    <p>
       Developed by ASGENLABS
     </p>
 
-    <p style="margin-top:15px;margin-bottom:0;">
+    <p>
       © 2026 ASGENLABS. All rights reserved.
     </p>
+
   </div>
 </footer>
 
